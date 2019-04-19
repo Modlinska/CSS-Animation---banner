@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #CFC8C4;
+
+}
+
+.banner {
+    height: 250px;
+    width: 800px;
+    background-color: #E8DCD7;
+    border: 10px solid #424140;
+    border-radius: 20px;
+    padding: 20px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: space-between;
+    overflow: hidden;
+
+
+}
+
+h2 {
+    margin: 10px;
+    padding: 0 10px;
+    width: 200px;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+    background: #FF746A;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bold;
+    color: crimson;
+    margin: 10px;
+    font-style: italic;
+    animation: textShow 5s 18s forwards, rotateX 2s 24s linear, disappear 4s 25s linear forwards;
+    -o-animation: textShow 5s 18s forwards, rotateX 2s 24s linear, disappear 4s 25s linear forwards;
+}
+.frame{
+    width: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame p {
+    border: 2px solid crimson;
+    width: 150px;
+    font-style: normal;
+    padding: 5px;
+    font-size: 20px;
+    color: #424140;
+    font-weight: bold;
+    align-self: center;
+    animation: inFrame 4s 20s forwards, rotateXF 2s 24s linear, disappearF 4s 25s linear forwards;
+    -o-animation: textShow 5s 18s forwards, rotateX 2s 24s linear, disappear 4s 25s linear forwards;
+
+}
+
+.text {
+    height: 150px;
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+    margin: 10px;
+}
+
+.bannerContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+/*Aniamcja etap 1*/
+
+.bannerContent:nth-child(1) {
+    transform: translateY(-250px);
+    animation: folDawn 2s linear forwards;
+}
+
+.bannerContent:nth-child(2) {
+    transform: translateY(-250px);
+    animation: folDawn 2s 2s linear forwards;
+}
+
+.bannerContent:nth-child(3) {
+    transform: translateY(-250px);
+    animation: folDawn 2s 4s linear forwards;
+}
+
+.bannerContent:nth-child(4) {
+    transform: translateY(-250px);
+    animation: folDawn 2s 6s linear forwards;
+}
+
+@keyframes folDawn {
+
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/*Aniamcja etap 2*/
+.bannerContent:nth-child(1) h2 {
+    animation: toLeft 2s 8s forwards, runLeft 5s 16s forwards;
+}
+
+.bannerContent:nth-child(2) h2 {
+    animation: toLeft 2s 9s forwards, runRight 5s 16s forwards;
+}
+
+.bannerContent:nth-child(3) h2 {
+    animation: toLeft 2s 10s forwards, runLeft 5s 16s forwards;
+}
+
+.bannerContent:nth-child(4) h2 {
+    animation: toLeft 2s 11s forwards, runRight 5s 16s forwards;
+}
+
+.bannerContent:nth-child(1) .img {
+    animation: toRight 2s 8s forwards, colors1 0s 12s forwards,
+    rotaLeft 3s 16s linear forwards;
+
+}
+
+.bannerContent:nth-child(2) .img {
+    animation: toRight 2s 9s forwards, colors2 0s 13s forwards,
+    rotaRight 1.5s 16s linear forwards;
+}
+
+.bannerContent:nth-child(3) .img {
+    animation: toRight 2s 10s forwards, colors3 0s 14s forwards,
+    rotaLeft 3s 16s linear forwards;
+}
+
+.bannerContent:nth-child(4) .img {
+    animation: toRight 2s 11s forwards, colors4 0s 15s forwards,
+    rotaRight 1.5s 16s linear forwards;
+}
+
+@keyframes toLeft {
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes toRight {
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+/*Aniamacje etap 3*/
+
+@keyframes colors1 {
+
+    100% {
+        background: url("../images/tło.png") 0 0;
+        background-repeat: no-repeat;
+        background-position: 0 -5px;
+    }
+}
+
+@keyframes colors2 {
+    100% {
+        background: url("../images/tło.png") 0 0;
+        background-repeat: no-repeat;
+        background-position: 0 -80px;
+    }
+}
+
+@keyframes colors3 {
+    100% {
+        background: url("../images/tło.png") 0 0;
+        background-repeat: no-repeat;
+        background-position: 0 -130px;
+    }
+}
+
+@keyframes colors4 {
+    100% {
+        background: url("../images/tło.png") 0 0;
+        background-repeat: no-repeat;
+        background-position: 0 -190px;
+    }
+
+}
+
+/*4 etap animacji*/
+@keyframes runLeft {
+    100% {
+        transform: translateX(-600px);
+
+    }
+
+}
+
+@keyframes runRight {
+    100% {
+        transform: translateX(600px);
+
+    }
+}
+
+
+@keyframes rotaRight {
+    0% {
+        transform: translateX(0) rotate(0deg);
+
+    }
+
+    100% {
+        transform: translateX(300px) rotate(360deg);
+
+    }
+
+}
+
+@keyframes rotaLeft {
+    0% {
+        transform: translateX(0) rotate(360deg);
+
+    }
+
+    100% {
+        transform: translateX(-600px) rotate(0deg);
+
+    }
+}
+
+/* Etap 5 animacji*/
+@keyframes textShow {
+    0% {
+        -webkit-transform: translateY(-200px) scale(0);
+        -moz-transform: translateY(-200px) scale(0);
+        -ms-transform: translateY(-200px) scale(0);
+        -o-transform: translateY(-200px) scale(0);
+        transform: translateY(-200px) scale(0);
+    }
+    100% {
+
+        -webkit-transform: translateY(-200px) scale(1);
+        -moz-transform: translateY(-200px) scale(1);
+        -ms-transform: translateY(-200px) scale(1);
+        -o-transform: translateY(-200px) scale(1);
+        transform: translateY(-200px) scale(1);
+    }
+}
+
+@keyframes inFrame {
+    0% {
+
+        -webkit-transform: translate(-500px -400px);
+        -moz-transform: translate(-500px -400px);
+        -ms-transform: translate(-500px -400px);
+        -o-transform: translate(-500px -400px);
+        transform: translate(-500px, -400px);
+    }
+    50% {
+
+        -webkit-transform: translate(-250px -310px);
+        -moz-transform: translate(-250px -310px);
+        -ms-transform: translate(-250px -310px);
+        -o-transform: translate(-250px -310px);
+        transform: translate(-250px, -310px);
+
+    }
+    100% {
+
+        -webkit-transform: translate(0px -310px);
+        -moz-transform: translate(0px -310px);
+        -ms-transform: translate(0px -310px);
+        -o-transform: translate(0px -310px);
+        transform: translate(0px, -310px);
+    }
+}
+
+@keyframes rotateX {
+
+    0% {
+        transform: translate(0px, -200px);
+    }
+
+    100% {
+        transform: translate(0px, -200px) rotateX(360deg);
+
+    }
+}
+
+@keyframes rotateXF {
+
+    0% {
+        transform: translate(0px, -310px);
+    }
+
+    100% {
+        transform: translate(0px, -310px) rotateX(360deg);
+
+    }
+}
+
+/* Etap 6 animacji*/
+@keyframes disappear {
+    0% {
+        transform: translate(0px, -200px) scale(1, 1);
+        opacity: 1;
+
+    }
+    100% {
+        transform: translate(0px, -200px) scale(0.5, 1);
+        opacity: 0;
+    }
+}
+
+@keyframes disappearF {
+    0% {
+        transform: translate(0px, -310px) scale(1, 1);
+        opacity: 1;
+
+    }
+    100% {
+
+        transform: translate(0px, -310px) scale(0.5, 1);
+        opacity: 0;
+    }
+}
