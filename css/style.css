@@ -60,6 +60,13 @@ h2 {
     width: 30px;
     height: 30px;
     background: #FF746A;
+
+}
+
+.wrap {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
 }
 
 p {
@@ -70,14 +77,17 @@ p {
     font-style: italic;
     animation: textShow 5s 18s forwards, rotateX 2s 24s linear, disappear 4s 25s linear forwards;
     -o-animation: textShow 5s 18s forwards, rotateX 2s 24s linear, disappear 4s 25s linear forwards;
+
 }
-.frame{
+
+.frame {
     width: 300px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .frame p {
     border: 2px solid crimson;
     width: 150px;
@@ -89,6 +99,7 @@ p {
     align-self: center;
     animation: inFrame 4s 20s forwards, rotateXF 2s 24s linear, disappearF 4s 25s linear forwards;
     -o-animation: textShow 5s 18s forwards, rotateX 2s 24s linear, disappear 4s 25s linear forwards;
+
 
 }
 
@@ -175,25 +186,42 @@ p {
     animation: toLeft 2s 11s forwards, runRight 5s 16s forwards;
 }
 
-.bannerContent:nth-child(1) .img {
-    animation: toRight 2s 8s forwards, colors1 0s 12s forwards,
-    rotaLeft 3s 16s linear forwards;
-
-}
-
-.bannerContent:nth-child(2) .img {
-    animation: toRight 2s 9s forwards, colors2 0s 13s forwards,
-    rotaRight 1.5s 16s linear forwards;
-}
-
-.bannerContent:nth-child(3) .img {
-    animation: toRight 2s 10s forwards, colors3 0s 14s forwards,
+.bannerContent:nth-child(1) .wrap {
+    animation: toRight 2s 8s forwards,
     rotaLeft 3s 16s linear forwards;
 }
 
-.bannerContent:nth-child(4) .img {
-    animation: toRight 2s 11s forwards, colors4 0s 15s forwards,
+.bannerContent:nth-child(2) .wrap {
+    animation: toRight 2s 9s forwards,
     rotaRight 1.5s 16s linear forwards;
+}
+
+
+.bannerContent:nth-child(3) .wrap {
+    animation: toRight 2s 10s forwards,
+    rotaLeft 3s 16s linear forwards;
+}
+
+.bannerContent:nth-child(4) .wrap {
+    animation: toRight 2s 11s forwards,
+    rotaRight 1.5s 16s linear forwards;
+}
+
+.bannerContent:nth-child(1) img {
+    animation: colors1 0s 12s forwards;
+}
+
+.bannerContent:nth-child(2) img {
+    animation: colors2 0s 13s forwards;
+}
+
+
+.bannerContent:nth-child(3) img {
+    animation: colors3 0s 14s forwards;
+}
+
+.bannerContent:nth-child(4) img {
+    animation: colors4 0s 15s forwards;
 }
 
 @keyframes toLeft {
@@ -213,33 +241,41 @@ p {
 @keyframes colors1 {
 
     100% {
-        background: url("../images/tło.png") 0 0;
-        background-repeat: no-repeat;
-        background-position: 0 -5px;
+        -webkit-transform: translateY(-190px);
+        -moz-transform: translateY(-190px);
+        -ms-transform: translateY(-190px);
+        -o-transform: translateY(-190px);
+        transform: translateY(-190px);
     }
 }
 
 @keyframes colors2 {
     100% {
-        background: url("../images/tło.png") 0 0;
-        background-repeat: no-repeat;
-        background-position: 0 -80px;
+        -webkit-transform: translateY(-65px);
+        -moz-transform: translateY(-65px);
+        -ms-transform: translateY(-65px);
+        -o-transform: translateY(-65px);
+        transform: translateY(-65px);
     }
 }
 
 @keyframes colors3 {
     100% {
-        background: url("../images/tło.png") 0 0;
-        background-repeat: no-repeat;
-        background-position: 0 -130px;
+        -webkit-transform: translateY(-130px);
+        -moz-transform: translateY(-130px);
+        -ms-transform: translateY(-130px);
+        -o-transform: translateY(-130px);
+        transform: translateY(-130px);
     }
 }
 
 @keyframes colors4 {
     100% {
-        background: url("../images/tło.png") 0 0;
-        background-repeat: no-repeat;
-        background-position: 0 -190px;
+        -webkit-transform: translateY(-190px);
+        -moz-transform: translateY(-190px);
+        -ms-transform: translateY(-190px);
+        -o-transform: translateY(-190px);
+        transform: translateY(-190px);
     }
 
 }
@@ -336,11 +372,22 @@ p {
 @keyframes rotateX {
 
     0% {
+        -webkit-transform: translate(0px, -200px);
+        -moz-transform: translate(0px, -200px);
+        -ms-transform: translate(0px, -200px);
+        -o-transform: translate(0px, -200px);
         transform: translate(0px, -200px);
+
     }
 
     100% {
+        -webkit-transform: translate(0px, -200px) rotateX(360deg);
+        -moz-transform: translate(0px, -200px) rotateX(360deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=1, M12=-0, M21=0, M22=1";
+        -ms-transform: translate(0px, -200px) rotateX(360deg);
+        -o-transform: translate(0px, -200px) rotateX(360deg);
         transform: translate(0px, -200px) rotateX(360deg);
+
 
     }
 }
@@ -348,10 +395,19 @@ p {
 @keyframes rotateXF {
 
     0% {
+        -webkit-transform: translate(0px, -310px);
+        -moz-transform: translate(0px, -310px);
+        -ms-transform: translate(0px, -310px);
+        -o-transform: translate(0px, -310px);
         transform: translate(0px, -310px);
     }
 
     100% {
+        -webkit-transform: translate(0px, -310px) rotateX(360deg);
+        -moz-transform: translate(0px, -310px) rotateX(360deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=1, M12=-0, M21=0, M22=1";
+        -ms-transform: translate(0px, -310px) rotateX(360deg);
+        -o-transform: translate(0px, -310px) rotateX(360deg);
         transform: translate(0px, -310px) rotateX(360deg);
 
     }
